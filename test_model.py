@@ -9,7 +9,8 @@ def test_model(test_folder, clf, kmeans):
     predictions = []
     times = []
 
-    for filename in os.listdir(test_folder):
+    filenames = sorted(os.listdir(test_folder), key=lambda x: int(x.split('.')[0]))
+    for filename in filenames:
         if filename.endswith('.jpeg'):
             image_path = os.path.join(test_folder, filename)
 
