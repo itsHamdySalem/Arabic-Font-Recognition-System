@@ -16,8 +16,8 @@ def train_model(data_folder, num_clusters=100):
     i = 0
     for name in ["Scheherazade New", "Marhey", "Lemonada", "IBM Plex Sans Arabic"]:
         folder_path = os.path.join(data_folder, name)
-        filenames = sorted(os.listdir(folder_path), key=lambda x: int(x.split('.')[0]))
-        for filename in filenames[:20]:
+        
+        for filename in os.listdir(folder_path):
             image_path = os.path.join(folder_path, filename)
 
             image = cv2.imread(image_path)
@@ -41,7 +41,7 @@ def train_model(data_folder, num_clusters=100):
 
     X_hist = np.array(histograms)
 
-    X_train, X_val, y_train, y_val = train_test_split(X_hist, y, test_size=0.2, random_state=42)
+    X_train, X_val, y_train, y_val = train_test_split(X_hist, y, test_size=0.2, random_state=55)
 
     clf = SVC()
     clf.fit(X_train, y_train)
