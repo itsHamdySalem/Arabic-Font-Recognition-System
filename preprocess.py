@@ -21,6 +21,8 @@ def preprocess_image(image_path):
         inverted_image = cv2.bitwise_not(binary_image)
     else:
         inverted_image = binary_image
+
+    inverted_image = cv2.resize(inverted_image, (300, 300))
     
     return inverted_image
 
