@@ -13,9 +13,9 @@ def test_model(test_folder, clf, kmeans):
     for filename in filenames:
         if filename.endswith('.jpeg'):
             image_path = os.path.join(test_folder, filename)
-
-            start_time = time.time()
             test_image = cv2.imread(image_path)
+            
+            start_time = time.time()
             preprocessed_image = preprocess_image(test_image)
 
             features = extract_sift_features(preprocessed_image)
@@ -30,7 +30,7 @@ def test_model(test_folder, clf, kmeans):
                 predictions.append(prediction)
 
             end_time = time.time()
-            elapsed_time = end_time - start_time
+            elapsed_time = round(end_time - start_time, 3)
             times.append(elapsed_time)
 
     return predictions, times
