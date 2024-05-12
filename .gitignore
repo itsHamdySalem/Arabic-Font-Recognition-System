@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # pycache
 __pycache__/
 
@@ -9,3 +10,6 @@ data/
 
 # results
 results/
+=======
+__pycache__/
+>>>>>>> 7f448b2ff62ac2e0e482256420d139285d30e511
