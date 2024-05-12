@@ -17,7 +17,7 @@ def train_model(data_folder, num_clusters=100):
     for name in ["Scheherazade New", "Marhey", "Lemonada", "IBM Plex Sans Arabic"]:
         folder_path = os.path.join(data_folder, name)
         
-        for filename in os.listdir(folder_path):
+        for filename in os.listdir(folder_path)[:250]:
             image_path = os.path.join(folder_path, filename)
 
             image = cv2.imread(image_path)
