@@ -62,11 +62,11 @@ Ensure you have the following installed:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/abotaha23/Arabic-fonts-detector.git
+   git clone https://github.com/itsHamdySalem/Arabic-Font-Recognition-System.git
 
 2. Navigate to the project directory:
     ```sh
-    cd Arabic-fonts-detector
+    cd Arabic-Font-Recognition-System
 
 ## Results
 
